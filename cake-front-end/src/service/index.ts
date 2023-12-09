@@ -38,6 +38,7 @@ class HttpRequest {
 
           // token 過期
           if (response.status === 401 || response._data.code === '999') {
+            localStorage.removeItem('cake-customer-data')
             navigateTo('/login')
             useAuthStore().setCookie('cake-token', '', -1)
             useAuthStore().isToken = false

@@ -45,19 +45,14 @@ const handleLogin = async () => {
   try {
     await useAuth.login(formLabelAlign.value)
     loginSwitch.value = false
-
+    console.log('a')
     formLabelAlign.value = {
       name: '',
       account: '',
       password: '',
     }
   } catch (error) {
-    console.error('login error', error)
-
-    ElMessage({
-      message: '帳號或密碼錯誤',
-      type: 'error',
-    })
+    console.error('login error ==>', error)
   }
 }
 
@@ -106,61 +101,112 @@ const handleLogOut = async () => {
     <el-dialog
       v-if="registerSwitch"
       v-model="registerSwitch"
-      title="註冊"
       width="35%"
       center
+      class="form-container"
     >
-      <el-form
-        label-position="right"
-        label-width="100px"
-        :model="formLabelAlign"
-        style="max-width: 460px"
-      >
-        <el-form-item label="暱稱">
-          <el-input v-model="formLabelAlign.name" />
-        </el-form-item>
-        <el-form-item label="帳號">
-          <el-input v-model="formLabelAlign.account" />
-        </el-form-item>
-        <el-form-item label="密碼">
-          <el-input v-model="formLabelAlign.password" type="password" />
-        </el-form-item>
-      </el-form>
-      <template #footer>
-        <span class="dialog-footer">
-          <el-button @click="registerSwitch = false">取消</el-button>
-          <el-button type="warning" @click="handleRegister"> 註冊 </el-button>
-        </span>
-      </template>
+      <div class="login-page">
+        <div class="form">
+          <form class="login-form">
+            <input
+              type="text"
+              placeholder="name"
+              v-model="formLabelAlign.name"
+            />
+            <input
+              type="text"
+              placeholder="username"
+              v-model="formLabelAlign.account"
+            />
+            <input
+              type="password"
+              placeholder="password"
+              v-model="formLabelAlign.password"
+            />
+            <el-button @click="handleRegister">註冊</el-button>
+          </form>
+        </div>
+      </div>
     </el-dialog>
 
     <el-dialog
       v-if="loginSwitch"
       v-model="loginSwitch"
-      title="登入"
+      title=""
       width="35%"
       center
+      class="form-container"
     >
-      <el-form
-        label-position="right"
-        label-width="100px"
-        :model="formLabelAlign"
-        style="max-width: 460px"
-      >
-        <el-form-item label="帳號">
-          <el-input v-model="formLabelAlign.account" />
-        </el-form-item>
-        <el-form-item label="密碼">
-          <el-input v-model="formLabelAlign.password" type="password" />
-        </el-form-item>
-      </el-form>
-      <template #footer>
-        <span class="dialog-footer">
-          <el-button @click="registerSwitch = false">取消</el-button>
-          <el-button type="warning" @click="handleLogin"> 登入 </el-button>
-        </span>
-      </template>
+      <div class="login-page">
+        <div class="form">
+          <form class="login-form">
+            <input
+              type="text"
+              placeholder="username"
+              v-model="formLabelAlign.account"
+            />
+            <input
+              type="password"
+              placeholder="password"
+              v-model="formLabelAlign.password"
+            />
+            <el-button @click="handleLogin">登入</el-button>
+          </form>
+        </div>
+      </div>
     </el-dialog>
   </div>
 </template>
-<style lang="scss"></style>
+<style lang="scss">
+.form-container {
+  background: #ffffff;
+  max-width: 360px;
+  box-shadow:
+    0 0 20px 0 rgba(0, 0, 0, 0.2),
+    0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+  padding: 45px;
+  text-align: center;
+}
+
+.form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #4caf50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #43a047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4caf50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+</style>

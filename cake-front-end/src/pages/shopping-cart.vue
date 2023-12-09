@@ -51,11 +51,16 @@ const handleDeleteCartProduct = (row: any) => {
     return item.product_id !== row.product_id
   })
   shoppingCartData.value = newOrderData
+
+  totalPrice.value = newOrderData.reduce((acc: any, cur: any) => {
+    return acc + cur.amount * cur.price
+  }, 0)
+
   localStorage.setItem('orders', JSON.stringify(newOrderData))
 }
 
-// 一開始先撈 localStorage 的資料
-onMounted(async () => {
+// 算總金額
+const handleTotalPrice = () => {
   const productData = localStorage.getItem('orders')
 
   if (productData) {
@@ -69,6 +74,11 @@ onMounted(async () => {
   } else {
     console.log('沒有找到 myData')
   }
+}
+
+// 一開始先撈 localStorage 的資料
+onMounted(async () => {
+  handleTotalPrice()
 })
 </script>
 <template>

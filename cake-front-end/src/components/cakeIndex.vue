@@ -8,6 +8,7 @@ const cakeList = ref<any>([])
 
 //TODO: 加入訂單
 const handleAddOrder = (listItem: any) => {
+  console.log('authStore.isCurrentLogin', authStore.isCurrentLogin)
   if (!authStore.isCurrentLogin) {
     ElMessage({
       message: `尚未登入`,

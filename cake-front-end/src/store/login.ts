@@ -51,6 +51,7 @@ export const useAuthStore = defineStore('auth', {
           message: '帳號或密碼錯誤',
           type: 'error',
         })
+        throw new Error('登錄失敗')
       }
     },
     logout() {
