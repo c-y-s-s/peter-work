@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "657443cebb4b55679eb40c04"
+  },
+  "name": "好事花生",
+  "introduce": "主要內容物：巧克力泡芙蛋糕/花生奶霜/牛奶巧克力酥波蘿/北海道奶霜/法國鮮奶油/花生蛋糕碎粒",
+  "amount": 10,
+  "price": "788",
+  "productImg": "avataruploads/049cdbe5cc63102b14052a5d6b850243",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "657443fcbb4b55679eb40c08"
+  },
+  "name": "芋見香緹",
+  "introduce": "主要內容物：北海道奶霜/泡芙蛋糕體/芋泥/法國鮮奶油",
+  "amount": 10,
+  "price": "666",
+  "productImg": "avataruploads/57b42be90866334a09928d637dd8ad66",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6574442abb4b55679eb40c0b"
+  },
+  "name": "栗子可可",
+  "introduce": "主要內容物：巧克力泡芙蛋糕/法式糖漬栗子/北海道奶霜/法國鮮奶油/蘭姆酒",
+  "amount": 10,
+  "price": "444",
+  "productImg": "avataruploads/e86f38c054815f734ef2e9ce4deabb3c",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65744449bb4b55679eb40c0e"
+  },
+  "name": "草莓夏洛特7吋",
+  "introduce": "主要內容物：手指餅乾/草莓凍/香草香堤/泡芙蛋糕/香草奶霜",
+  "amount": 10,
+  "price": "543",
+  "productImg": "avataruploads/fa7619e3b10ce3846c67797d32b64b69",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65744463bb4b55679eb40c11"
+  },
+  "name": "頂級波士頓",
+  "introduce": "主要內容物：北海道奶霜/法國鮮奶油/波士頓蛋糕",
+  "amount": 10,
+  "price": "999",
+  "productImg": "avataruploads/482f7962f4b30e3d2d3fb5b311c29ea2",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65744483bb4b55679eb40c14"
+  },
+  "name": "戀莓白白",
+  "introduce": "主要內容物：泡芙蛋糕/北海道奶霜/法國鮮奶油/布丁/新鮮草莓",
+  "amount": 12,
+  "price": "9999",
+  "productImg": "avataruploads/feba263cd646728f8e72cf109ba258d5",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6574449abb4b55679eb40c17"
+  },
+  "name": "德國黑森林",
+  "introduce": "主要內容物：巧克力泡芙蛋糕/酒釀碎櫻桃奶油/北海道奶霜/糖漬櫻桃...",
+  "amount": 20,
+  "price": "1299",
+  "productImg": "avataruploads/db290a33d4dccc442d57dbae7e23b553",
+  "status": true,
+  "__v": 0
+}]
