@@ -1,6 +1,18 @@
 # peter-work
 幫peter做的作業= =
 
+FrontEnd
+- Nuxt3
+- Element plus
+- Pinia
+- day.js
+
+backEnd
+- MongoDB
+- Express
+
+
+啟動步驟
 - install MongoDB Compass
 
 https://www.mongodb.com/try/download/compass
